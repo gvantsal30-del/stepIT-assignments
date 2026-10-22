@@ -1,0 +1,21 @@
+scores = []
+while True:
+    score = input("please enter your scores or 'stop' to end operation: ")
+    if score == "stop":
+        break
+
+    try:
+        numbers = int(score)
+        if 0 <= numbers <= 10:
+            scores.append(numbers)
+        else:
+            print("score should be from 0 to 10")
+    except ValueError:
+        print("please enter correct number or'stop': ")
+min_score = min(scores)
+max_score = max(scores)
+avg_score = sum(scores) / len(scores)
+print(scores)
+print(f"minimaluri qulaa {min_score}")
+print(f"maximaluri qulaa {max_score}")
+print(f"qulebis sashualoa {avg_score}")
