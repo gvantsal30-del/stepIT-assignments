@@ -1,0 +1,18 @@
+def analyze_text(text, target_word):
+    words = text.split()
+    total_words = len(words)
+
+    count = 0
+    for word in words:
+        if word.lower().strip(",") == target_word.lower():
+            count += 1
+
+    longest_word = ""
+    for word in words:
+        if len(word) > len(longest_word):
+            longest_word = word
+
+    return total_words, count, longest_word
+
+
+print(analyze_text("Python is easy and Python is fun", "python"))
